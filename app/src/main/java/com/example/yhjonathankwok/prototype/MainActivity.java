@@ -77,28 +77,16 @@ public class MainActivity extends Activity {
 
     public void addListenerOnButton() {
 
-        btnChangeDate = (Button) findViewById(R.id.btnChangeDate);
+        //btnChangeDate = (Button) findViewById(R.id.btnChangeDate);
         btnChangeTime = (Button)findViewById(R.id.btnChangeTime);
-
-        btnChangeDate.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                showDialog(DATE_DIALOG_ID);
-
-            }
-
-        });
-
         btnChangeTime.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 showDialog(TIME_DIALOG_ID);
+                showDialog(DATE_DIALOG_ID);
             }
         });
-
     }
 
     @Override
@@ -147,7 +135,6 @@ public class MainActivity extends Activity {
                 //dpResult.init(year, month, day, null);
             }
     };
-
 
     private static String pad(int c) {
         if (c >= 10)
